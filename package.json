@@ -12,7 +12,7 @@
     "cordova-android"
   ],
   "author": "Santiago Cardenas",
-  "license": "ISC",
+  "license": "Apache 2.0",
   "dependencies": {
     "@ionic-native/core": "^4.20.0",
     "gulp": "^4.0.0"

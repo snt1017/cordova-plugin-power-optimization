@@ -23,7 +23,8 @@ public class ProtectedApps {
         boolean skipMessage = settings.getBoolean("skipProtectedAppCheck", false);
         boolean foundCorrectIntent = false;
         if(!skipMessage || forceShow){
-            for (Intent intent : Constants.POWERMANAGER_INTENTS) {
+            Constants cons = new Constants(context);
+            for (Intent intent : cons.getPowermanagerIntents()) {
                 if (isCallable(context, intent)) {
                     foundCorrectIntent = true;
                     context.startActivity(intent);
