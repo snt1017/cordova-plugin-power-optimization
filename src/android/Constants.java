@@ -37,6 +37,8 @@ public class Constants {
 
     // HUAWEI
     private static final String HUAWEI_ACTION_POWERSAVING = "huawei.intent.action.HSM_PROTECTED_APPS";
+    private static final String HUAWEI_COMPONENT_POWERSAVING_PKG = "com.huawei.systemmanager";
+    private static final String HUAWEI_COMPONENT_POWERSAVING_CLS = "com.huawei.systemmanager.appcontrol.activity.StartupAppControlActivity";
 
     // LETV
     private static final String LETV_ACTION_POWERSAVING_PKG = "com.letv.android.letvsafe";
@@ -80,6 +82,8 @@ public class Constants {
         // Huawei
         Intent huawei_1 = new Intent();
         huawei_1.setAction(HUAWEI_ACTION_POWERSAVING);
+        Intent huawei_2 = new Intent();
+        huawei_2.setComponent(new ComponentName(HUAWEI_COMPONENT_POWERSAVING_PKG, HUAWEI_COMPONENT_POWERSAVING_CLS));
 
         // LeTV
         // TODO Test it
@@ -106,6 +110,7 @@ public class Constants {
                 samsung_3,
                 samsung_4,
                 huawei_1,
+                huawei_2,
                 letv_1,
                 meizu_1,
                 meizu_2,
