@@ -12,6 +12,9 @@
                 <param name="android-package" value="cordova.plugin.PowerOptimization.PowerOptimization" />
             </feature>
         </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+        </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
         <source-file src="src/android/PowerOptimization.java" target-dir="src/cordova/plugin/PowerOptimization" />

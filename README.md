@@ -16,6 +16,7 @@ var failure = function (result) {
 cordova.plugins.PowerOptimization.IsIgnoringBatteryOptimizations({}, success, failure);
 ```
 
+Be sure that your AndroidManifest.xml contains this permission 
 ``` xml
 <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 ```

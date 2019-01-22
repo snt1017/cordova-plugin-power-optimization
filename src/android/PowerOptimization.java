@@ -44,9 +44,6 @@ public class PowerOptimization extends CordovaPlugin {
         } else if (action.equals("IsIgnoringDataSaver")) {
             this.IsIgnoringDataSaver(context, packageName, callbackContext);
             return true;
-        } else if (action.equals("IsIgnoringDataSaver")) {
-            this.IsIgnoringDataSaver(context, packageName, callbackContext);
-            return true;
         } else if (action.equals("RequestDataSaverMenu")) {
             this.RequestDataSaverMenu(context, packageName, callbackContext);
             return true;
