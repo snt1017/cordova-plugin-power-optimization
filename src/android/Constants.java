@@ -53,6 +53,7 @@ public class Constants {
     public List<Intent> powerManagerIntents;
 
     public Constants(Context context){
+        this.context = context;
         populateList();
     }
 
