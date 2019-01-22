@@ -89,13 +89,12 @@ public class PowerOptimization extends CordovaPlugin {
     public boolean RequestOptimizations(Context context, String packageName, CallbackContext callbackContext) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                String message ="Optimizations Requested Successfully";
                 Intent intent = new Intent();
                 intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setData(Uri.parse("package:" + packageName));
                 context.startActivity(intent);
-                callbackContext.success(message);
+                callbackContext.success();
                 return true;
             }
             else
@@ -122,7 +121,7 @@ public class PowerOptimization extends CordovaPlugin {
                     context.startActivity(intent);
                 }
 
-                callbackContext.success("requested");
+                callbackContext.success();
                 return true;
             }
             else
@@ -155,6 +154,8 @@ public class PowerOptimization extends CordovaPlugin {
                     case RESTRICT_BACKGROUND_STATUS_WHITELISTED:
                         // Background data usage is blocked for this app. Wherever possible,
                         // the app should also use less data in the foreground.
+                        message = "true";
+                        break;
                     case RESTRICT_BACKGROUND_STATUS_DISABLED:
                         // Data Saver is disabled. Since the device is connected to a
                         // metered network, the app should use less data wherever possible.
@@ -188,7 +189,7 @@ public class PowerOptimization extends CordovaPlugin {
                 intent.setData(Uri.parse("package:" + packageName));
                 context.startActivity(intent);
 
-                callbackContext.success("requested");
+                callbackContext.success();
                 return true;
             }else{
                 callbackContext.error("DATA_SAVER Not available.");

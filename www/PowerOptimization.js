@@ -8,8 +8,18 @@ var execute = function (function_name, arg0) {
     });
 }
 
+var execute_boolean = function (function_name, arg0) {
+    return new Promise((resolve, reject) => {
+        var success = (data) => {
+            if(data=="true") resolve(true);
+            else resolve(false);
+        }
+        exec(success, reject, MODULE, function_name, [arg0]);
+    });
+}
+
 exports.IsIgnoringBatteryOptimizations = function (arg0) {
-    return execute('IsIgnoringBatteryOptimizations', arg0);
+    return execute_boolean('IsIgnoringBatteryOptimizations', arg0);
 };
 
 exports.RequestOptimizations = function (arg0) {
@@ -21,7 +31,7 @@ exports.RequestOptimizationsMenu = function (arg0) {
 };
 
 exports.IsIgnoringDataSaver = function (arg0) {
-    return execute('IsIgnoringDataSaver', arg0);
+    return execute_boolean('IsIgnoringBatteryOptimizations', arg0);
 };
 
 exports.RequestDataSaverMenu = function (arg0) {

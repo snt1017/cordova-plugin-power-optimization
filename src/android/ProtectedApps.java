@@ -36,7 +36,7 @@ public class ProtectedApps {
             editor.apply();
         }
         result.put("skip_message", skipMessage);
-        result.put("fount_intent", foundCorrectIntent);
+        result.put("found_intent", foundCorrectIntent);
         callbackContext.success(result);
     }
 
