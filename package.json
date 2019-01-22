@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-power-optimization",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-power-optimization",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Santiago Cardenas",
+  "license": "ISC",
+  "dependencies": {
+    "@ionic-native/core": "^4.20.0",
+    "gulp": "^4.0.0"
+  },
+  "description": ""
+}
