@@ -35,8 +35,8 @@ Check if the battery optimization is ignoring:
 ```javascript
 cordova.plugins.PowerOptimization.IsIgnoringBatteryOptimizations().then((result)=> {
   console.log(result);
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -45,8 +45,8 @@ Request permisson to ignore optimizations:
 ```javascript
 cordova.plugins.PowerOptimization.RequestOptimizations().then((result) => {
   console.log('ok');
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -55,8 +55,8 @@ Go to battery optimizations configurations menu:
 ```javascript
 cordova.plugins.PowerOptimization.RequestOptimizationsMenu().then((result) => {
   console.log('ok');
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -65,8 +65,8 @@ Check if have any data restrictions in background:
 ```javascript
 cordova.plugins.PowerOptimization.IsIgnoringDataSaver().then((result) => {
   console.log(result);
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -75,8 +75,8 @@ Go to data restrictions in background configurations menu:
 ```javascript
 cordova.plugins.PowerOptimization.RequestDataSaverMenu().then((result) => {
   console.log('ok');
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -85,8 +85,8 @@ Check if have another battery restriction is present into phone (like huawei, xi
 ```javascript
 cordova.plugins.PowerOptimization.HaveProtectedAppsCheck().then((result) => {
   console.log(result);
-}, (result) => {
-  console.error(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 
@@ -94,9 +94,9 @@ Go to configurations menu if another battery restriction is present into phone (
 
 ```javascript
 cordova.plugins.PowerOptimization.ProtectedAppCheck().then((result) => {
-  console.log('ok');
-}, (result) => {
-  console.error(result);
+  console.log(result);
+}, (err) => {
+  console.error(err);
 });
 ```
 # Notes

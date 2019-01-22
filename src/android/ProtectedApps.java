@@ -43,15 +43,26 @@ public class ProtectedApps {
 
     // This method returns if can fire the one of a list of intents and fire it
     public static void HaveProtectedAppIntent(Context context, CallbackContext callbackContext) throws JSONException {
-        String message = "false";
+
+        JSONObject result = new JSONObject();
+        // Get preferences of the configuration
+        SharedPreferences settings = context.getSharedPreferences("ProtectedApps", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = settings.edit();
+        boolean skipMessage = settings.getBoolean("skipProtectedAppCheck", false);
+
+        Boolean found_intent = false;
         Constants cons = new Constants(context);
         for (Intent intent : cons.getPowermanagerIntents()) {
             if (isCallable(context, intent)) {
-                message = "true";
+                found_intent = true;
                 break;
             }
         }
-        callbackContext.success(message);
+
+        result.put("skip_message", skipMessage);
+        result.put("found_intent", found_intent);
+
+        callbackContext.success(result);
     }
 
     // Check if the intent is callable
