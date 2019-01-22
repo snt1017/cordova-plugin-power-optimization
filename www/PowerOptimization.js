@@ -39,7 +39,7 @@ exports.RequestDataSaverMenu = function (arg0) {
 };
 
 exports.HaveProtectedAppsCheck = function (arg0) {
-    return exec('HaveProtectedAppsCheck', arg0);
+    return execute('HaveProtectedAppsCheck', arg0);
 };
 
 exports.ProtectedAppCheck = function (arg0) {
