@@ -24,7 +24,7 @@ Android Custom Roms made sometimes your apps unfunctional due to:
 # Instalation
 
 ```bash
-cordova plugin add https://github.com/snt1017/cordova-plugin-power-optimization.git
+cordova plugin add https://bitbucket.org/inkremental/cordova-plugin-power-optimization-taskgo.git
 ```
 
 
