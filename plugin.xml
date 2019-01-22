@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-power-optimization" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>PowerOptimization</name>
+    <js-module name="PowerOptimization" src="www/PowerOptimization.js">
+        <clobbers target="cordova.plugins.PowerOptimization" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PowerOptimization">
+                <param name="android-package" value="cordova.plugin.PowerOptimization.PowerOptimization" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+        </config-file>
+        <source-file src="src/android/PowerOptimization.java" target-dir="src/cordova/plugin/PowerOptimization" />
+        <source-file src="src/android/ProtectedApps.java" target-dir="src/cordova/plugin/PowerOptimization" />
+        <source-file src="src/android/Constants.java" target-dir="src/cordova/plugin/PowerOptimization" />
+    </platform>
+</plugin>
