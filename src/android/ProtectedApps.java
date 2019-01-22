@@ -32,10 +32,10 @@ public class ProtectedApps {
                 }
             }
         }
-        if (!foundCorrectIntent) {
-            editor.putBoolean("skipProtectedAppCheck", true);
-            editor.apply();
-        }
+        
+        editor.putBoolean("skipProtectedAppCheck", true);
+        editor.apply();
+
         result.put("skip_message", skipMessage);
         result.put("found_intent", foundCorrectIntent);
         callbackContext.success(result);
