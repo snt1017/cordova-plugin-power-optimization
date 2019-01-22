@@ -80,6 +80,16 @@ cordova.plugins.PowerOptimization.RequestDataSaverMenu().then((result) => {
 });
 ```
 
+Check if have another battery restriction is present into phone (like huawei, xiaomi, etc):
+
+```javascript
+cordova.plugins.PowerOptimization.HaveProtectedAppsCheck().then((result) => {
+  console.log(result);
+}, (result) => {
+  console.error(result);
+});
+```
+
 Go to configurations menu if another battery restriction is present into phone (like huawei, xiaomi, etc). You can send true into params if you want to force show the menu (is only show the fist time without params):
 
 ```javascript

@@ -48,6 +48,10 @@ public class PowerOptimization extends CordovaPlugin {
         } else if (action.equals("RequestDataSaverMenu")) {
             this.RequestDataSaverMenu(context, packageName, callbackContext);
             return true;
+        } else if (action.equals("HaveProtectedAppsCheck")) {
+            Boolean force = args.optBoolean(0, false);
+            ProtectedApps.HaveProtectedAppIntent(context, callbackContext);
+            return true;
         } else if (action.equals("ProtectedAppCheck")) {
             Boolean force = args.optBoolean(0, false);
             ProtectedApps.ProtectedAppCheck(context, callbackContext, force);

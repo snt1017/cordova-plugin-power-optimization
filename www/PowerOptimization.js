@@ -38,6 +38,10 @@ exports.RequestDataSaverMenu = function (arg0) {
     return execute('RequestDataSaverMenu', arg0);
 };
 
+exports.HaveProtectedAppsCheck = function (arg0) {
+    return execute_boolean('HaveProtectedAppsCheck', arg0);
+};
+
 exports.ProtectedAppCheck = function (arg0) {
     return execute('ProtectedAppCheck', arg0);
 };

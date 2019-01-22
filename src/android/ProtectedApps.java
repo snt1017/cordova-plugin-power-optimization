@@ -41,6 +41,19 @@ public class ProtectedApps {
         callbackContext.success(result);
     }
 
+    // This method returns if can fire the one of a list of intents and fire it
+    public static void HaveProtectedAppIntent(Context context, CallbackContext callbackContext) throws JSONException {
+        String message = "false";
+        Constants cons = new Constants(context);
+        for (Intent intent : cons.getPowermanagerIntents()) {
+            if (isCallable(context, intent)) {
+                message = "true";
+                break;
+            }
+        }
+        callbackContext.success(message);
+    }
+
     // Check if the intent is callable
     private static boolean isCallable(Context context, Intent intent) {
         List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent,
