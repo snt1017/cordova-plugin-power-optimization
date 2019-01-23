@@ -69,15 +69,21 @@ public class Constants {
         xiomi_1.putExtra(MIUI_ACTION_POWER_SAVE_EXTRA_LABEL, getApplicationName());
 
         // Samsung intents
-        // TODO Test it
         Intent samsung_1 = new Intent();
         samsung_1.setAction(SAMSUNG_SYSTEMMANAGER_POWERSAVING_ACTION);
+        samsung_1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         Intent samsung_2 = new Intent();
         samsung_2.setComponent(new ComponentName(SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V3, SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V3_ACTIVITY));
+        samsung_2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         Intent samsung_3 = new Intent();
         samsung_3.setComponent(new ComponentName(SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V2, SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V2_ACTIVITY));
+        samsung_3.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         Intent samsung_4 = new Intent();
         samsung_4.setComponent(new ComponentName(SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V1, SAMSUNG_SYSTEMMANAGER_POWERSAVING_PACKAGE_V1_ACTIVITY));
+        samsung_4.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         // Huawei
         Intent huawei_1 = new Intent();
