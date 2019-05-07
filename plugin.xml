@@ -14,6 +14,7 @@
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+            <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>

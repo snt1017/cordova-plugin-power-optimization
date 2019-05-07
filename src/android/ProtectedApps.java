@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
 import org.json.JSONException;
@@ -13,9 +14,11 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class ProtectedApps {
+    public static final String TAG = "ProtectedApps";
 
     // This method checks if can fire the one of a list of intents and fire it
     public static void ProtectedAppCheck(Context context, CallbackContext callbackContext, boolean forceShow) throws JSONException {
+        Log.d(TAG, "ProtectedAppCheck - forceShow: " + forceShow);
         JSONObject result = new JSONObject();
         // Get preferences of the configuration
         SharedPreferences settings = context.getSharedPreferences("ProtectedApps", Context.MODE_PRIVATE);
