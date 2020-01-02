@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-power-optimization",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "cordova": {
     "id": "cordova-plugin-power-optimization",
     "platforms": [
@@ -9,8 +9,25 @@
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "power optimization",
+    "battery",
+    "doze mode",
+    "optimization",
+    "android",
+    "app kill",
+    "foreground",
+    "background",
+    "PowerManager",
+    "Android PowerManager",
+    "backgroundable-android",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS how to do it right"
   ],
+  "homepage": "https://github.com/snt1017/cordova-plugin-power-optimization/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snt1017/cordova-plugin-power-optimization.git"
+  },
   "author": "Santiago Cardenas",
   "license": "Apache 2.0",
   "dependencies": {},
