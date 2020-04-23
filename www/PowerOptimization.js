@@ -32,7 +32,7 @@ exports.RequestOptimizationsMenu = function (arg0) {
 };
 
 exports.IsIgnoringDataSaver = function (arg0) {
-    return execute_boolean('IsIgnoringBatteryOptimizations', arg0);
+    return execute_boolean('IsIgnoringDataSaver', arg0);
 };
 
 exports.RequestDataSaverMenu = function (arg0) {
